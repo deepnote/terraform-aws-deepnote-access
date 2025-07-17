@@ -1,4 +1,4 @@
-# Deepnote IAM Management Module
+# terraform-aws-deepnote-access
 
 This Terraform module creates the necessary IAM roles and policies for Deepnote to manage your AWS infrastructure. It follows the principle of least privilege and includes proper tagging and security controls.
 
