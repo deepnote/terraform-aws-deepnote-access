@@ -154,16 +154,16 @@ resource "aws_iam_role" "engineer_role" {
       {
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::978928340082:root"
+          AWS = "arn:aws:iam::318911662267:root"
         }
         Action = "sts:AssumeRole"
         Condition = {
           ArnLike = {
             "aws:PrincipalArn" = [
-              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionEngineer_1b5a36fcae83ae61*",
-              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionEngineer_1b5a36fcae83ae61*",
-              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionAdmin_642531504c1179c1*",
-              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionAdmin_642531504c1179c1*"
+              "arn:aws:iam::318911662267:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionEngineer_81bae8be82beff06*",
+              "arn:aws:iam::318911662267:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionEngineer_81bae8be82beff06*",
+              "arn:aws:iam::318911662267:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionAdmin_e7ae0d41f57593ac*",
+              "arn:aws:iam::318911662267:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionAdmin_e7ae0d41f57593ac*"
             ]
           }
         }
@@ -186,14 +186,14 @@ resource "aws_iam_role" "admin_role" {
       {
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::978928340082:root"
+          AWS = "arn:aws:iam::318911662267:root"
         }
         Action = "sts:AssumeRole"
         Condition = {
           ArnLike = {
             "aws:PrincipalArn" = [
-              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionAdmin_642531504c1179c1*",
-              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionAdmin_642531504c1179c1*"
+              "arn:aws:iam::318911662267:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionAdmin_e7ae0d41f57593ac*",
+              "arn:aws:iam::318911662267:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionAdmin_e7ae0d41f57593ac*"
             ]
           }
         }
