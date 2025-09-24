@@ -154,6 +154,23 @@ resource "aws_iam_role" "engineer_role" {
       {
         Effect = "Allow"
         Principal = {
+          AWS = "arn:aws:iam::978928340082:root"
+        }
+        Action = "sts:AssumeRole"
+        Condition = {
+          ArnLike = {
+            "aws:PrincipalArn" = [
+              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionEngineer_1b5a36fcae83ae61*",
+              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionEngineer_1b5a36fcae83ae61*",
+              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionAdmin_642531504c1179c1*",
+              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionAdmin_642531504c1179c1*"
+            ]
+          }
+        }
+      },
+      {
+        Effect = "Allow"
+        Principal = {
           AWS = "arn:aws:iam::318911662267:root"
         }
         Action = "sts:AssumeRole"
@@ -183,6 +200,21 @@ resource "aws_iam_role" "admin_role" {
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          AWS = "arn:aws:iam::978928340082:root"
+        }
+        Action = "sts:AssumeRole"
+        Condition = {
+          ArnLike = {
+            "aws:PrincipalArn" = [
+              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/*/AWSReservedSSO_ProductionAdmin_642531504c1179c1*",
+              "arn:aws:iam::978928340082:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_ProductionAdmin_642531504c1179c1*"
+            ]
+          }
+        }
+      },
       {
         Effect = "Allow"
         Principal = {
