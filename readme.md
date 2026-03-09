@@ -38,7 +38,7 @@ provider "aws" {
 }
 
 module "deepnote_iam" {
-  source = "github.com/deepnote/terraform-aws-deepnote-access?ref=v1.0.0"
+  source = "github.com/deepnote/terraform-aws-deepnote-access?ref=v1.2.0"
 
   # Optional: Customize naming
   name_prefix = "deepnote"
