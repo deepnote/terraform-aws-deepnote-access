@@ -92,10 +92,10 @@ The admin policy includes:
 - **Self-protection**: Explicitly denies manipulation of Deepnote roles and policies
 
 ### Cross-Account Security
-- Roles can only be assumed by Deepnote's account (978928340082)
+- Roles can only be assumed by Deepnote's account (318911662267)
 - SSO integration with specific Deepnote SSO role patterns:
-  - Production Engineer role: `AWSReservedSSO_ProductionEngineer_1b5a36fcae83ae61*`
-  - Production Admin role: `AWSReservedSSO_ProductionAdmin_642531504c1179c1*`
+  - Production Engineer role: `AWSReservedSSO_ProductionEngineer_81bae8be82beff06*`
+  - Production Admin role: `AWSReservedSSO_ProductionAdmin_e7ae0d41f57593ac*`
 - Proper resource-level permissions for IAM operations
 
 ### Engineer Policy Permissions
