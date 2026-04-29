@@ -112,6 +112,7 @@ The admin role includes engineer permissions plus:
 - Service-linked role creation
 - IAM resource creation with required tags
 - IAM resource management (add, attach, delete, detach, put, pass role, remove, tag, untag, update)
+- New IAM policy versions on tagged application policies (e.g. S3 bucket changes)
 - Self-protection mechanisms
 
 ## Example Usage
