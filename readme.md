@@ -38,7 +38,7 @@ provider "aws" {
 }
 
 module "deepnote_iam" {
-  source = "github.com/deepnote/terraform-aws-deepnote-access?ref=v1.2.0"
+  source = "github.com/deepnote/terraform-aws-deepnote-access?ref=v1.3.0"
 
   # Optional: Customize naming
   name_prefix = "deepnote"
@@ -112,6 +112,7 @@ The admin role includes engineer permissions plus:
 - Service-linked role creation
 - IAM resource creation with required tags
 - IAM resource management (add, attach, delete, detach, put, pass role, remove, tag, untag, update)
+- New IAM policy versions on tagged application policies (e.g. S3 bucket changes)
 - Self-protection mechanisms
 
 ## Example Usage

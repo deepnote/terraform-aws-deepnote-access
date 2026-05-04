@@ -122,6 +122,22 @@ resource "aws_iam_policy" "admin_policy" {
         ]
       },
       {
+        Sid    = "AllowPolicyVersionManagement"
+        Effect = "Allow"
+        Action = [
+          "iam:CreatePolicyVersion",
+          "iam:DeletePolicyVersion",
+          "iam:SetDefaultPolicyVersion"
+        ]
+        Resource = "arn:aws:iam::${local.account_id}:policy/*"
+        Condition = {
+          StringEquals = {
+            "aws:ResourceTag/ManagedBy"     = "deepnote"
+            "aws:ResourceTag/ProvisionedBy" = "terraform"
+          }
+        }
+      },
+      {
         Sid    = "ExplicitlyDenyManipulationOfDeepnoteRolesAndPolicies"
         Effect = "Deny"
         Action = [
